@@ -12,8 +12,9 @@ public class BlinkingAnimator : MonoBehaviour
     void Update()
     {
         var sequence = DOTween.Sequence();
-        sequence.Append(transform.DOScale(0f, 0.1f));
-        sequence.Append(transform.DOScale(1f, 0.1f));
-        sequence.Append(transform.DOMove(Vector3.right, 0.1f));
+        sequence.Append(circle.transform.DOScale(0f, 0.1f));
+        sequence.Append(circle.transform.DOScale(1f, 0.1f));
+        sequence.Append(circle.transform.DOScale(0f, 0.1f));
+        sequence.Append(circle.transform.DOLocalMove(Vector3.right, 0.1f));
     }
 }
